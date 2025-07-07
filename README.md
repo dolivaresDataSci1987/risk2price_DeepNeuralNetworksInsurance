@@ -1,10 +1,9 @@
 # 📊 Insurance Pricing Analytics — Simulated Data Project
 
 This project showcases the potential of **data-driven pricing strategies** in the insurance sector using a **simulated national dataset**. The goal is to demonstrate how machine learning can be applied to detect pricing inefficiencies, simulate business impact, and guide strategic decisions.
-
-> ⚠️ **Disclaimer:** All data used in this project is **artificially generated** and **does not represent any real company, customer, or policy**. The financial figures and predictions are purely illustrative and represent a simulated nationwide insurance system, not the reality of any specific company.
 ![cover](https://github.com/user-attachments/assets/8cfd461c-e163-41fe-a7b7-04d9101327f3)
 
+> ⚠️ **Disclaimer:** All data used in this project is **artificially generated** and **does not represent any real company, customer, or policy**. The financial figures and predictions are purely illustrative and represent a simulated nationwide insurance system, not the reality of any specific company.
 
 ---
 
