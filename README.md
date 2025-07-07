@@ -54,27 +54,10 @@ The dataset is fully simulated and includes:
 - Regions like *Central* and *San Pedro* and *Premium coverage clients* concentrate most of the underpricing margin.
 - A flexible pricing model based on predicted risk can unlock **hidden profit opportunities** while maintaining fairness.
 
----
-
-## 🗂️ File Structure
-insurance-pricing-analytics/
-├── insurance_pricing_analysis.ipynb # Main notebook
-├── simulated_insurance_data.csv # Input data
-├── outputs/ # Graphs and visualizations
-├── README.md # This file
-└── .gitignore # Python + Jupyter ignores
-
-
----
-
-## 🔧 How to Run
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/insurance-pricing-analytics.git
-   cd insurance-pricing-analytics
-
-pip install pandas numpy matplotlib seaborn scikit-learn tensorflow
-jupyter notebook insurance_pricing_analysis.ipynb
+## 🚧 Future Improvements
+- Add quantile-based loss functions to better capture extreme claims.
+- Introduce calibration or confidence intervals to improve interpretability.
+- Modularize the notebook into reusable scripts for production workflows.
+- Test ensemble models and compare with actuarial baselines.
 
 
