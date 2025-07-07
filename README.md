@@ -22,42 +22,49 @@ The dataset is fully simulated and includes:
 - Policy coverage types and regions
 - Actual premiums and predicted claim costs
 
----
+📌 Key Stages
+✅ Stage 1: Predictive Modeling
+Trained a fully connected DNN to estimate TotalPaidClaims per client.
 
-## 📌 Key Stages
+Achieved a test MAE of approximately 230,000 Gs, which corresponds to ~21% of the average claim cost (≈ 1.1 million Gs).
 
-### ✅ Stage 1: Predictive Modeling
-- Trained a regression model to estimate total paid claims.
-- Achieved a test MAE of ~230,000 Gs.
+✅ Stage 2: Suggested Premiums
+Recommended premiums were calculated using:
+SuggestedPremium = PredictedClaimCost × 1.25
+(a 25% business margin).
 
-### ✅ Stage 2: Suggested Premiums
-- Calculated suggested premiums with a 25% margin.
-- Labeled policies as *Underpriced*, *Fairly Priced*, or *Overpriced*.
+Policies were labeled based on the difference between actual and suggested premium.
 
-### ✅ Stage 3: Business Impact Simulation
-- Estimated financial impact of mispriced premiums.
-- Simulated potential uplift in revenue if adjustments were applied.
+✅ Stage 3: Business Impact Simulation
+Simulated the financial effect of correcting mispriced policies.
 
-### ✅ Stage 4: Strategic Pricing Simulation
-- Focused on clients with the highest underpricing gaps.
-- Calculated how much premiums could be increased **without hurting demand**, based on elasticity assumptions.
-- Simulated three revenue scenarios:
-  - **Status Quo** (Current Premiums)
-  - **Full Adoption** (Apply all suggested premiums)
-  - **Conservative Policy** (Apply increases only to severely underpriced clients)
+Identified regions and coverage types with the largest hidden revenue gaps.
 
----
+✅ Stage 4: Strategic Pricing Simulation
+Focused on severely underpriced clients only.
 
-## 💡 Final Insights
+Modeled three policy scenarios to estimate annual uplift:
 
-- The conservative policy alone could **boost total revenue by over 1.2 trillion Gs (~170 million USD)**.
-- Regions like *Central* and *San Pedro* and *Premium coverage clients* concentrate most of the underpricing margin.
-- A flexible pricing model based on predicted risk can unlock **hidden profit opportunities** while maintaining fairness.
+Status Quo (no changes)
 
-## 🚧 Future Improvements
-- Add quantile-based loss functions to better capture extreme claims.
-- Introduce calibration or confidence intervals to improve interpretability.
-- Modularize the notebook into reusable scripts for production workflows.
-- Test ensemble models and compare with actuarial baselines.
+Full Adoption (apply all suggested premiums)
 
+Conservative Policy (adjust only the most underpriced)
 
+💡 Final Insights
+The conservative pricing policy yields a potential uplift of approximately 2.3 billion Gs (~330,000 USD).
+
+Regions such as Central and San Pedro, as well as Premium coverage clients, concentrate most of the underpricing margin.
+
+A flexible, model-driven pricing strategy enables more granular and fair premium adjustments, improving both profitability and market sustainability.
+
+🚧 Future Improvements
+Add quantile-based loss functions to better capture extreme claim values.
+
+Include confidence intervals or uncertainty estimates for premium recommendations.
+
+Modularize the codebase into reusable scripts and functions for production.
+
+Benchmark against traditional actuarial methods (e.g., GLM, credibility theory).
+
+Integrate real-world elasticity data to validate behavioral assumptions.
