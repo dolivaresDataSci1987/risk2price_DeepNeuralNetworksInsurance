@@ -54,7 +54,7 @@ The dataset is fully simulated and includes:
 
 ## 💡 Final Insights
 
-- The conservative pricing policy yields a potential uplift of approximately **2.3 billion Gs (~330,000 USD)**.
+- The conservative pricing policy yields a potential uplift of approximately **187,099	USB (45%+)**.
 - Regions such as *Central* and *San Pedro*, as well as *Premium coverage* clients, concentrate most of the underpricing margin.
 - A flexible, model-driven pricing strategy enables more **granular and fair premium adjustments**, improving both profitability and market sustainability.
 
